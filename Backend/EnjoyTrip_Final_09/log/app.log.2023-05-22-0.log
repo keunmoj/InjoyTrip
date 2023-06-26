@@ -1,0 +1,158 @@
+2023-05-22 01:27:15.038  INFO 30576 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-05-22 01:27:15.750  INFO 30576 --- [RMI TCP Connection(2)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-22 01:27:15.753  INFO 30576 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-22 01:27:15.763  WARN 30576 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2023-05-22 01:27:15.774  INFO 30576 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-05-22 01:27:15.781  INFO 30576 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-05-22 09:17:28.366  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : Starting EnjoyTripFinal09Application using Java 1.8.0_192 on DESKTOP-DOGVPUB with PID 14964 (C:\Users\SSAFY\Desktop\EnjoyTrip_Final_09\backend\EnjoyTrip_Final_09\bin\main started by SSAFY in C:\Users\SSAFY\Desktop\EnjoyTrip_Final_09\backend\EnjoyTrip_Final_09)
+2023-05-22 09:17:28.367  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : No active profile set, falling back to 1 default profile: "default"
+2023-05-22 09:17:28.400  INFO 14964 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-22 09:17:28.401  INFO 14964 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-22 09:17:29.313  INFO 14964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-22 09:17:29.324  INFO 14964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-22 09:17:29.324  INFO 14964 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-22 09:17:29.401  INFO 14964 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-22 09:17:29.402  INFO 14964 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1001 ms
+2023-05-22 09:17:30.038  INFO 14964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-22 09:17:30.063  INFO 14964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-22 09:17:30.071  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : Started EnjoyTripFinal09Application in 2.007 seconds (JVM running for 2.56)
+2023-05-22 09:17:33.545  INFO 14964 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-22 09:17:33.627  INFO 14964 --- [Thread-6] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-22 09:17:33.746  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : Starting EnjoyTripFinal09Application using Java 1.8.0_192 on DESKTOP-DOGVPUB with PID 14964 (C:\Users\SSAFY\Desktop\EnjoyTrip_Final_09\backend\EnjoyTrip_Final_09\bin\main started by SSAFY in C:\Users\SSAFY\Desktop\EnjoyTrip_Final_09\backend\EnjoyTrip_Final_09)
+2023-05-22 09:17:33.747  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : No active profile set, falling back to 1 default profile: "default"
+2023-05-22 09:17:33.974  INFO 14964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-22 09:17:33.974  INFO 14964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-22 09:17:33.974  INFO 14964 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-22 09:17:33.986  INFO 14964 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-22 09:17:33.986  INFO 14964 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 238 ms
+2023-05-22 09:17:34.110  INFO 14964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-22 09:17:34.117  INFO 14964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-22 09:17:34.121  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : Started EnjoyTripFinal09Application in 0.399 seconds (JVM running for 6.61)
+2023-05-22 09:17:34.122  INFO 14964 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-05-22 09:18:17.940  INFO 14964 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-22 09:18:17.941  INFO 14964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-22 09:18:17.941  INFO 14964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-05-22 09:18:17.978  INFO 14964 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-22 09:18:18.173  INFO 14964 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-22 09:45:39.224  INFO 14964 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-22 09:45:39.281  INFO 14964 --- [Thread-8] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-22 09:45:39.283  INFO 14964 --- [Thread-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-22 09:45:39.289  WARN 14964 --- [Thread-8] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2023-05-22 09:45:39.295  INFO 14964 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-22 09:45:39.301  INFO 14964 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-22 09:45:39.403  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : Starting EnjoyTripFinal09Application using Java 1.8.0_192 on DESKTOP-DOGVPUB with PID 14964 (C:\Users\SSAFY\Desktop\EnjoyTrip_Final_09\backend\EnjoyTrip_Final_09\bin\main started by SSAFY in C:\Users\SSAFY\Desktop\EnjoyTrip_Final_09\backend\EnjoyTrip_Final_09)
+2023-05-22 09:45:39.404  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : No active profile set, falling back to 1 default profile: "default"
+2023-05-22 09:45:39.620  INFO 14964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-22 09:45:39.620  INFO 14964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-22 09:45:39.620  INFO 14964 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-22 09:45:39.630  INFO 14964 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-22 09:45:39.630  INFO 14964 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 225 ms
+2023-05-22 09:45:39.727  INFO 14964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-22 09:45:39.734  INFO 14964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-22 09:45:39.736  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : Started EnjoyTripFinal09Application in 0.359 seconds (JVM running for 1692.225)
+2023-05-22 09:45:39.737  INFO 14964 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-05-22 09:45:44.181  INFO 14964 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-22 09:45:44.182  INFO 14964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-22 09:45:44.183  INFO 14964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-05-22 09:46:05.117  INFO 14964 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-05-22 09:46:05.128  INFO 14964 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-05-22 10:45:36.647  WARN 14964 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2023-05-22 10:45:49.305  WARN 14964 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2023-05-22 10:48:52.496  WARN 14964 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2023-05-22 10:49:14.009  WARN 14964 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2023-05-22 10:53:20.971  WARN 14964 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2023-05-22 10:53:23.660  WARN 14964 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2023-05-22 10:53:26.853  WARN 14964 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2023-05-22 10:54:16.645  WARN 14964 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2023-05-22 12:07:21.522  INFO 14964 --- [http-nio-8080-exec-3] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x050x010x00...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:262) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) [tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) [tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.74.jar:9.0.74]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_192]
+
+2023-05-22 15:41:40.021  INFO 14964 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-22 15:41:40.084  INFO 14964 --- [Thread-12] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-22 15:41:40.086  INFO 14964 --- [Thread-12] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-22 15:41:40.092  WARN 14964 --- [Thread-12] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2023-05-22 15:41:40.096  INFO 14964 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-05-22 15:41:40.102  INFO 14964 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-05-22 15:41:40.282  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : Starting EnjoyTripFinal09Application using Java 1.8.0_192 on DESKTOP-DOGVPUB with PID 14964 (C:\Users\SSAFY\Desktop\EnjoyTrip_Final_09\backend\EnjoyTrip_Final_09\bin\main started by SSAFY in C:\Users\SSAFY\Desktop\EnjoyTrip_Final_09\backend\EnjoyTrip_Final_09)
+2023-05-22 15:41:40.282  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : No active profile set, falling back to 1 default profile: "default"
+2023-05-22 15:41:40.525  INFO 14964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-22 15:41:40.525  INFO 14964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-22 15:41:40.526  INFO 14964 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-22 15:41:40.540  INFO 14964 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-22 15:41:40.540  INFO 14964 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 256 ms
+2023-05-22 15:41:40.650  INFO 14964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-22 15:41:40.657  INFO 14964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-22 15:41:40.660  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : Started EnjoyTripFinal09Application in 0.408 seconds (JVM running for 23053.149)
+2023-05-22 15:41:40.660  INFO 14964 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-05-22 15:41:48.281  INFO 14964 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-22 15:41:48.337  INFO 14964 --- [Thread-16] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-22 15:41:48.471  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : Starting EnjoyTripFinal09Application using Java 1.8.0_192 on DESKTOP-DOGVPUB with PID 14964 (C:\Users\SSAFY\Desktop\EnjoyTrip_Final_09\backend\EnjoyTrip_Final_09\bin\main started by SSAFY in C:\Users\SSAFY\Desktop\EnjoyTrip_Final_09\backend\EnjoyTrip_Final_09)
+2023-05-22 15:41:48.471  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : No active profile set, falling back to 1 default profile: "default"
+2023-05-22 15:41:48.679  INFO 14964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-22 15:41:48.679  INFO 14964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-22 15:41:48.679  INFO 14964 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-22 15:41:48.688  INFO 14964 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-22 15:41:48.688  INFO 14964 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 216 ms
+2023-05-22 15:41:48.776  INFO 14964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-22 15:41:48.782  INFO 14964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-22 15:41:48.785  INFO 14964 --- [restartedMain] c.s.trip.EnjoyTripFinal09Application     : Started EnjoyTripFinal09Application in 0.337 seconds (JVM running for 23061.275)
+2023-05-22 15:41:48.786  INFO 14964 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-05-22 15:41:55.518  INFO 14964 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-22 15:41:55.519  INFO 14964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-22 15:41:55.520  INFO 14964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-05-22 15:41:58.948  INFO 14964 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-05-22 15:41:58.958  INFO 14964 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-05-22 17:54:21.047  INFO 14964 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-05-22 17:54:21.112  INFO 14964 --- [RMI TCP Connection(2)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-22 17:54:21.114  INFO 14964 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-22 17:54:21.121  WARN 14964 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-3 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2023-05-22 17:54:21.130  INFO 14964 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-05-22 17:54:21.138  INFO 14964 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.

@@ -1,0 +1,87 @@
+package com.ssafy.trip.tour.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.ssafy.trip.tour.dto.GugunDto;
+import com.ssafy.trip.tour.dto.SidoDto;
+import com.ssafy.trip.tour.dto.TripDto;
+import com.ssafy.trip.tour.dto.TripParamDto;
+
+@Mapper
+public interface TripDao {
+	// 시구군 리스트
+	List<SidoDto> sidoList();
+	List<GugunDto> gugunList(GugunDto gugunDto);
+	
+	//=================== 여행지
+	// 여행 목록
+	List<TripDto> tripList(TripParamDto tripParamDto);
+	int tripListTotalCount(TripParamDto tripParamDto);
+	// 여행 검색 리스트
+	List<TripDto> tripListSearchWord(TripParamDto tripParamDto);
+	int tripListSearchWordTotalCount(TripParamDto tripParamDto);
+	
+	// 여행 목록 시도
+	List<TripDto> tripListSido(TripParamDto tripParamDto);
+	int tripListSidoTotalCount(TripParamDto tripParamDto);
+	// 여행 목록 시도/군구
+	List<TripDto> tripListSidoGugun(TripParamDto tripParamDto);
+	int tripListSidoGugunTotalCount(TripParamDto tripParamDto);
+	// 여행 검색 리스트
+	List<TripDto> tripListSearchWordSidoGugun(TripParamDto tripParamDto);
+	int tripListSearchWordSidoGugunTotalCount(TripParamDto tripParamDto);
+	// 여행 검색 리스트 (시 만 선택)
+	List<TripDto> tripListSearchWordSido(TripParamDto tripParamDto);
+	int tripListSearchWordSidoTotalCount(TripParamDto tripParamDto);
+
+	TripDto tripDetail(TripParamDto tripParamDto);
+	
+	//==================== 음식점
+	List<TripDto> foodList(TripParamDto tripParamDto);
+	int foodListTotalCount(TripParamDto tripParamDto);
+
+	// 식당 목록 시도
+	List<TripDto> foodListSido(TripParamDto tripParamDto);
+	int foodListSidoTotalCount(TripParamDto tripParamDto);
+	// 식당 목록 시도/군구
+	List<TripDto> foodListSidoGugun(TripParamDto tripParamDto);
+	int foodListSidoGugunTotalCount(TripParamDto tripParamDto);
+	// 식당 상세
+	TripDto foodDetail(TripParamDto tripParamDto);
+	
+	
+	
+	
+	
+	//==================== 숙박시설 -32
+	List<TripDto> lodgmentList(TripParamDto tripParamDto);
+	int lodgmentListTotalCount(TripParamDto tripParamDto);
+	
+	// 숙박시설 목록 시도
+	List<TripDto> lodgmentListSido(TripParamDto tripParamDto);
+	int lodgmentListSidoTotalCount(TripParamDto tripParamDto);
+	// 숙박시설 목록 시도/군구
+	List<TripDto> lodgmentListSidoGugun(TripParamDto tripParamDto);
+	int lodgmentListSidoGugunTotalCount(TripParamDto tripParamDto);
+	// 숙박시설 상세
+	TripDto lodgmentDetail(TripParamDto tripParamDto);
+	
+	
+	
+	
+	//==================== 액티비티 -28
+	List<TripDto> activityList(TripParamDto tripParamDto);
+	int activityListTotalCount(TripParamDto tripParamDto);
+	
+	// 액티비티 목록 시도
+	List<TripDto> activityListSido(TripParamDto tripParamDto);
+	int activityListSidoTotalCount(TripParamDto tripParamDto);
+	// 액티비티 목록 시도/군구
+	List<TripDto> activityListSidoGugun(TripParamDto tripParamDto);
+	int activityListSidoGugunTotalCount(TripParamDto tripParamDto);
+	// 액티비티 상세
+	TripDto activityDetail(TripParamDto tripParamDto);
+	
+}

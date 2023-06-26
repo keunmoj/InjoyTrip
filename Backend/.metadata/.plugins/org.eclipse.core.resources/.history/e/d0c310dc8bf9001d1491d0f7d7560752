@@ -1,0 +1,39 @@
+package com.ssafy.trip.tour.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ssafy.trip.tour.dao.CardDao;
+import com.ssafy.trip.tour.dto.CardDto;
+import com.ssafy.trip.tour.dto.TripDto;
+
+@Service
+public class CardServiceImpl implements CardService {
+
+	@Autowired
+	CardDao dao;
+
+	private static final int SUCCESS = 1;
+	private static final int FAIL = -1;
+
+	@Override
+	public List<CardDto> cardList(int userSeq) {
+		List<CardDto> = dao.cardList(userSeq);		
+		return null;
+	}
+
+	@Override
+	public List<TripDto> cardDetail(CardDto cardDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int cardDelete(CardDto cardDto) {
+
+		return 0;
+	}
+
+}

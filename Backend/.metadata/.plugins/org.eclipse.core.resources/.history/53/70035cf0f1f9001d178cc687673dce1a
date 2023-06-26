@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.ssafy.trip.tour.dao.CardDao">
+
+    <insert id="cardInsert" useGeneratedKeys="true" keyProperty="card_seq" parameterType="map">
+        insert into card( card_thumbnail_img_url, card_title, card_comment, card_createdate, user_seq)
+                    values ( #{cardThumbnailImgUrl}, #{cardTitle}, #{cardComment}, now(), #{userSeq}  )
+    </insert>
+    
+<!--     <insert id="cardContentInsert" parameterType="map"> -->
+<!--         insert into card_contents( card_seq, content_id ) -->
+<!--                     values ( #{cardSeq}, #{contentId}  ) -->
+<!--     </insert> -->
+
+	<insert id="cardContentInsert" parameterType="java.util.List">
+	  INSERT INTO card_contnets ( card_seq, content_id )
+	  VALUES
+	  <foreach item="item" collection="list" separator=",">
+	    (#{item.cardSeq}, #{item.contentId})
+	  </foreach>
+	</insert>
+
+	<select id="cardList" parameterType="int" resultType="com.ssafy.trip.tour.dto.CardDto">
+		select *
+		from card
+		where user_seq = #{userSeq}
+	</select>
+	
+	
+	<select id="cardDetail" parameterType="map" resultType="com.ssafy.trip.tour.dto.TripDto">
+		select content_id, content_type_id, title, addr1, addr2, first_image, first_image2, readcount, sido_code, gugun_code, latitude, longitude
+		from attraction_info
+		where content_id = 
+							(
+							 select content_id
+							   from card_contents
+							  where card_seq = #{cardSeq}
+							 )
+	</select>
+	
+	
+	<delete id="cardDelete" parameterType="map">
+        DELETE FROM card WHERE BOARD_ID = #{cardSeq}
+    </delete>
+    
+</mapper>

@@ -1,0 +1,44 @@
+package com.ssafy.trip.tour.service;
+
+import java.util.List;
+
+import com.ssafy.trip.tour.dto.GugunDto;
+import com.ssafy.trip.tour.dto.SidoDto;
+import com.ssafy.trip.tour.dto.TripDto;
+import com.ssafy.trip.tour.dto.TripParamDto;
+import com.ssafy.trip.tour.dto.TripResultDto;
+
+public interface TripService {
+	// ===================== 시구군 ========================
+	List<SidoDto> sidoList();
+	List<GugunDto> gugunList(GugunDto gugunDto);
+	
+	
+	// ===================== 여행 목록 ====================
+	TripResultDto tripList(TripParamDto tripParamDto);
+	// ===================== 여행 검색 목록 ====================
+	TripResultDto tripListSearchWord(TripParamDto tripParamDto);
+	// ===================== 여행 목록 시도 선택 =======================
+	TripResultDto tripListSido(TripParamDto tripParamDto);
+	// ===================== 여행 검색 목록 시도 선택 ===================
+	TripResultDto tripListSearchWordSido(TripParamDto tripParamDto);
+	// ===================== 여행 목록 시군구 선택 =======================
+	TripResultDto tripListSidoGugun(TripParamDto tripParamDto);
+	// ===================== 여행 검색 목록 시군구 선택 ===================
+	TripResultDto tripListSearchWordSidoGugun(TripParamDto tripParamDto);
+	
+
+	// ===================== 여행 상세 =================================
+	TripResultDto tripDetail(TripParamDto tripParamDto);
+	
+	
+	//==================== 콘텐츠
+	TripResultDto contentList(TripParamDto tripParamDto);
+
+	// 콘텐츠 목록 시도
+	TripResultDto contentListSido(TripParamDto tripParamDto);
+	// 콘텐츠 목록 시도/군구
+	TripResultDto contentListSidoGugun(TripParamDto tripParamDto);
+	// 콘텐츠 상세
+	TripResultDto contentDetail(TripParamDto tripParamDto);
+}

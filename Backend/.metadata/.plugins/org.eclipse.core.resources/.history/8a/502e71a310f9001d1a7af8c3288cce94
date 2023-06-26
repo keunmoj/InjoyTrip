@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.ssafy.trip.tour.dao.TripDao">
+	<!--  시구군 리스트  -->
+	<select id="sidoList" resultType="com.ssafy.trip.tour.dto.SidoDto">
+		select *
+		from sido
+	</select>
+	
+	<select id="gugunList" resultType="com.ssafy.trip.tour.dto.GugunDto">
+		select *
+		from gugun
+		where sido_code = ${sidoCode}
+	</select>
+
+
+	<!--  Trip List  -->
+	<select id="tripList" parameterType="map" resultType="com.ssafy.trip.tour.dto.TripDto">
+		select content_id, content_type_id, title, addr1, addr2, first_image, first_image2, readcount, sido_code, gugun_code, latitude, longitude
+		from attraction_info
+		where content_type_id = ${contentTypeId}
+		limit #{limit} offset #{offset}
+	</select>
+	
+	<select id="tripListSido" parameterType="map" resultType="com.ssafy.trip.tour.dto.TripDto">
+		select content_id, content_type_id, title, addr1, addr2, first_image, first_image2, readcount, sido_code, gugun_code, latitude, longitude
+		from attraction_info
+		where content_type_id = ${contentTypeId}
+		and sido_code = ${sidoCode}
+		limit #{limit} offset #{offset}
+	</select>
+	
+	<select id="tripListSidoGugun" parameterType="map" resultType="com.ssafy.trip.tour.dto.TripDto">
+		select content_id, content_type_id, title, addr1, addr2, first_image, first_image2, readcount, sido_code, gugun_code, latitude, longitude
+		from attraction_info
+		where content_type_id = ${contentTypeId}
+		and sido_code = ${sidoCode}
+		and gugun_code = ${gugunCode}
+		limit #{limit} offset #{offset}
+	</select>
+	
+	<select id="tripListTotalCount" resultType="int">
+		select count(*) from attraction_info
+		where content_type_id = ${contentTypeId}
+	</select>
+	
+	<select id="tripListSidoTotalCount" resultType="int">
+		select count(*) from attraction_info
+		where content_type_id = ${contentTypeId}
+		and sido_code = ${sidoCode}
+	</select>
+	
+	<select id="tripListSidoGugunTotalCount" resultType="int">
+		select count(*) from attraction_info
+		where content_type_id = ${contentTypeId}
+		and sido_code = ${sidoCode}
+		and gugun_code = ${gugunCode}
+	</select>
+	
+	<select id="tripListSearchWord" parameterType="map" resultType="com.ssafy.trip.tour.dto.TripDto">
+		select content_id, content_type_id, title, addr1, addr2, first_image, first_image2, readcount, sido_code, gugun_code, latitude, longitude
+		from attraction_info
+		where title like concat('%', #{searchWord}, '%')
+		and content_type_id = ${contentTypeId}
+		limit #{limit} offset #{offset}
+	</select>
+	
+	<select id="tripListSearchWordSidoGugun" parameterType="map" resultType="com.ssafy.trip.tour.dto.TripDto">
+		select content_id, content_type_id, title, first_image, first_image2, readcount, sido_code, gugun_code, latitude, longitude
+		from attraction_info
+		where title like concat('%', #{searchWord}, '%')
+		and content_type_id = ${contentTypeId}
+		and sido_code = ${sidoCode}
+		and gugun_code = ${gugunCode}
+		limit #{limit} offset #{offset}
+	</select>
+	
+	<select id="tripListSearchWordTotalCount" resultType="int">
+		select count(*) 
+		from attraction_info
+		where title like concat('%', #{searchWord}, '%')
+	</select>
+	
+	<select id="tripListSearchWordSidoGugunTotalCount" resultType="int">
+		select count(*) 
+		from attraction_info
+		where title like concat('%', #{searchWord}, '%')
+		and sido_code = ${sidoCode}
+		and gugun_code = ${gugunCode}
+	</select>
+	
+	<!--  Trip Detail  -->
+	<select id="tripDetail" parameterType="int" resultType="com.ssafy.trip.tour.dto.TripDto">
+		select * 
+		from attraction_info
+		where content_id = #{contentId}
+	</select>
+	
+</mapper>

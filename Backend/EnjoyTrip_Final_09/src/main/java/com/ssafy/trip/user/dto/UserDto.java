@@ -1,0 +1,29 @@
+package com.ssafy.trip.user.dto;
+
+import java.util.Date;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserDto {
+	private int userSeq;
+	private String userName;
+	private String userEmail;
+	private String userPassword;
+	private String userNickname;
+	private String userProfileImageUrl;
+	private Date userRegistDate;
+
+	
+	// 카드정보 list로 받아오는 정보 필요
+	private String userClsf;
+	
+}

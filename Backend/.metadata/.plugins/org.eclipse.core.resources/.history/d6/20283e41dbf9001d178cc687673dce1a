@@ -1,0 +1,18 @@
+package com.ssafy.trip.tour.service;
+
+import java.util.List;
+
+import com.ssafy.trip.tour.dto.CardContentDto;
+import com.ssafy.trip.tour.dto.CardDto;
+import com.ssafy.trip.tour.dto.CardResultDto;
+
+public interface CardService {
+	CardResultDto cardInsert(CardDto cardDto);
+
+	CardResultDto cardList(int userSeq);
+
+	CardResultDto cardDetail(CardDto cardDto);
+
+	CardResultDto cardDelete(CardDto cardDto);
+
+}

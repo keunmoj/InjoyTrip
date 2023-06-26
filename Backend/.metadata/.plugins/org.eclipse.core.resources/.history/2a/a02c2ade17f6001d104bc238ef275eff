@@ -1,0 +1,44 @@
+package com.ssafy.trip.user.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ssafy.trip.user.dto.UserDto;
+import com.ssafy.trip.user.dto.UserResultDto;
+import com.ssafy.trip.user.service.UserService;
+
+
+@RestController
+public class UserController {
+	
+	@Autowired
+	UserService userService;
+	
+	private static final int SUCCESS = 1; // 심볼로써 1은 성공을 의미한다.
+	
+	@PostMapping(value="/users")
+	public ResponseEntity<Map<String, String>> register(@ResponseBody UserDto userDto) {
+		
+		System.out.println("here is controller");
+		System.out.println(userDto);
+		
+		UserResultDto userResultDto = userService.userRegister(userDto);
+		
+		Map<String, String> map = new HashMap<>();
+		
+		if(userResultDto.getResult() == SUCCESS) {
+			map.put("result", "success");
+			return ResponseEntity.ok().body(map);
+		}else {
+			map.put("result", "fail");
+			return new ResponseEntity<Map<String, String>>(map, HttpStatus.NOT_FOUND);
+		}
+	}
+}

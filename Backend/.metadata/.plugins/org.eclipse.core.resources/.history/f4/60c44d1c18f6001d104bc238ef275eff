@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.ssafy.trip.user.dao.UserDao">
+	<insert id="userRegister" parameterType="com.ssafy.trip.user.dto.UserDto">
+		insert into users (user_name, user_password, user_email, user_register_date, user_clsf)
+		values (#{userName}, #{userPassword}, #{userEmail}, now(), #{userClsf})
+	</insert>
+	
+	<select id="validNickname" parameterType="string" resultType ="string">
+		select user_nickname
+		  from users
+		 where user_nickname = #{userNickname}
+	</select>
+	<select id="validEamil" parameterType="string" resultType ="string">
+		select user_email
+		  from users
+		 where user_email = #{userEmail}
+	</select>
+	
+</mapper>

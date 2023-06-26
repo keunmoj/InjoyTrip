@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.ssafy.trip.tour.dao.TripDao">
+
+
+
+	<!--  lodgment List  -->
+	<select id="lodgmentList" parameterType="map" resultType="com.ssafy.trip.tour.dto.TripDto">
+		select content_id, content_type_id, title, addr1, addr2, first_image, first_image2, readcount, sido_code, gugun_code, latitude, longitude
+		from attraction_info
+		where content_type_id = ${contentTypeId}
+		limit #{limit} offset #{offset}
+	</select>
+	
+	<select id="lodgmentListSido" parameterType="map" resultType="com.ssafy.trip.tour.dto.TripDto">
+		select content_id, content_type_id, title, addr1, addr2, first_image, first_image2, readcount, sido_code, gugun_code, latitude, longitude
+		from attraction_info
+		where content_type_id = ${contentTypeId}
+		and sido_code = ${sidoCode}
+		limit #{limit} offset #{offset}
+	</select>
+	
+	<select id="lodgmentListSidoGugun" parameterType="map" resultType="com.ssafy.trip.tour.dto.TripDto">
+		select content_id, content_type_id, title, addr1, addr2, first_image, first_image2, readcount, sido_code, gugun_code, latitude, longitude
+		from attraction_info
+		where content_type_id = ${contentTypeId}
+		and sido_code = ${sidoCode}
+		and gugun_code = ${gugunCode}
+		limit #{limit} offset #{offset}
+	</select>
+	
+	<select id="lodgmentListTotalCount" resultType="int">
+		select count(*) from attraction_info
+		where content_type_id = ${contentTypeId}
+	</select>
+	
+	<select id="lodgmentListSidoTotalCount" resultType="int">
+		select count(*) from attraction_info
+		where content_type_id = ${contentTypeId}
+		and sido_code = ${sidoCode}
+	</select>
+	
+	<select id="lodgmentListSidoGugunTotalCount" resultType="int">
+		select count(*) from attraction_info
+		where content_type_id = ${contentTypeId}
+		and sido_code = ${sidoCode}
+		and gugun_code = ${gugunCode}
+	</select>
+	
+	
+	<!--  lodgment Detail  -->
+	<select id="lodgmentDetail" parameterType="int" resultType="com.ssafy.trip.tour.dto.TripDto">
+		select * 
+		from attraction_info
+		where content_id = #{contentId}
+	</select>
+	
+</mapper>

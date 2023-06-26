@@ -1,0 +1,24 @@
+package com.ssafy.trip.tour.dto;
+
+import java.util.Date;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+public class CardDto {
+	int cardSeq;
+	String cardThumbnailImgUrl;
+	String cardTitle;
+	String cardComment;
+	Date cardCreatedate;
+
+	int userSeq;
+}

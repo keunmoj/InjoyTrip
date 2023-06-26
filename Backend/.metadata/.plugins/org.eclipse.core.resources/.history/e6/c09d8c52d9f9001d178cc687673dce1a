@@ -1,0 +1,19 @@
+package com.ssafy.trip.tour.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.ssafy.trip.tour.dto.CardDto;
+import com.ssafy.trip.tour.dto.TripDto;
+
+@Mapper
+public interface CardDao {
+	
+	List<CardDto> cardInsert(CardDto cardDto);
+	List<CardDto> cardList(int userSeq);
+	List<TripDto> cardDetail(CardDto cardDto);
+	int cardDelete(CardDto cardDto);
+	
+	
+}

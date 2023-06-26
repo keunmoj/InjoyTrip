@@ -1,0 +1,77 @@
+package com.ssafy.trip.tour.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ssafy.trip.tour.dao.CardDao;
+import com.ssafy.trip.tour.dto.CardDto;
+import com.ssafy.trip.tour.dto.CardResultDto;
+import com.ssafy.trip.tour.dto.TripDto;
+
+@Service
+public class CardServiceImpl implements CardService {
+
+	@Autowired
+	CardDao dao;
+
+	private static final int SUCCESS = 1;
+	private static final int FAIL = -1;
+
+	@Override
+	public CardResultDto cardList(int userSeq) {
+		CardResultDto cardResultDto = new CardResultDto();
+		System.out.println("카드 검색 수행");
+		try {
+			List<CardDto> list = dao.cardList(userSeq);
+
+			cardResultDto.setList(list);
+			cardResultDto.setResult(SUCCESS);
+		} catch (Exception e) {
+			e.printStackTrace();
+			cardResultDto.setResult(FAIL);
+		}
+
+		return cardResultDto;
+	}
+
+	@Override
+	public CardResultDto cardDetail(CardDto cardDto) {
+		CardResultDto cardResultDto = new CardResultDto();
+		System.out.println("카드 검색 수행");
+		try {
+			List<TripDto> list = dao.cardDetail(cardDto);
+			cardResultDto.getDto().setList(list);
+			cardResultDto.setResult(SUCCESS);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			cardResultDto.setResult(FAIL);
+		}
+
+		return cardResultDto;
+	}
+
+	@Override
+	public CardResultDto cardDelete(CardDto cardDto) {
+		CardResultDto cardResultDto = new CardResultDto();
+		System.out.println("카드 검색 수행");
+		try {
+			int result = dao.cardDelete(cardDto);
+			if(result == 1) {
+				cardResultDto.setResult(SUCCESS);
+				
+			}
+
+
+			cardResultDto.setList(list);
+		} catch (Exception e) {
+			e.printStackTrace();
+			cardResultDto.setResult(FAIL);
+		}
+
+		return cardResultDto;
+	}
+
+}

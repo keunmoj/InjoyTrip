@@ -1,0 +1,6 @@
+package com.ssafy.trip.tour.dto;
+
+public class CardContentDto {
+	private int cardSeq;
+	private int ContentId;
+}

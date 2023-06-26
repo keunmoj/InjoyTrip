@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.ssafy.trip.user.dao.LoginDao">
+
+	<select id="login" parameterType="string" resultType="com.ssafy.trip.user.dto.UserDto" >
+		select *
+		  from users
+		 where user_email = #{userEmail}
+	</select>
+	
+</mapper>

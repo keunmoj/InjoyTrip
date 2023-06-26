@@ -1,0 +1,5 @@
+package com.ssafy.trip.tour.dto;
+
+public class CardDto {
+
+}

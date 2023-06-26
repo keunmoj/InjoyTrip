@@ -1,0 +1,146 @@
+package com.ssafy.trip.tour.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ssafy.trip.tour.dao.TripDao;
+import com.ssafy.trip.tour.dto.GugunDto;
+import com.ssafy.trip.tour.dto.SidoDto;
+import com.ssafy.trip.tour.dto.TripDto;
+import com.ssafy.trip.tour.dto.TripParamDto;
+import com.ssafy.trip.tour.dto.TripResultDto;
+
+@Service
+public class TripServiceImpl implements TripService {
+
+	@Autowired
+	TripDao dao;
+
+	private static final int SUCCESS = 1;
+	private static final int FAIL = -1;
+	
+	
+	// ======================= 시도구군 API ==============================
+	@Override
+	public List<SidoDto> sidoList() {
+		List<SidoDto> list = dao.sidoList();
+		return list;
+	}
+
+	@Override
+	public List<GugunDto> gugunList(GugunDto gugunDto) {
+		List<GugunDto> list = dao.gugunList(gugunDto);
+		return list;
+	}
+
+	
+	// ========================== 여행  API ===========================
+	@Override
+	public TripResultDto tripList(TripParamDto tripParamDto) {
+		TripResultDto tripResultDto = new TripResultDto();
+
+		try {
+			List<TripDto> list = dao.tripList(tripParamDto);
+			int count = dao.tripListTotalCount(tripParamDto);
+
+			tripResultDto.setList(list);
+			tripResultDto.setCount(count);
+			tripResultDto.setResult(SUCCESS);
+		} catch (Exception e) {
+			e.printStackTrace();
+			tripResultDto.setResult(FAIL);
+		}
+
+		return tripResultDto;
+	}
+
+	@Override
+	public TripResultDto tripListSearchWord(TripParamDto tripParamDto) {
+		TripResultDto tripResultDto = new TripResultDto();
+
+		try {
+			List<TripDto> list = dao.tripListSearchWord(tripParamDto);
+			int count = dao.tripListSearchWordTotalCount(tripParamDto);
+
+			tripResultDto.setList(list);
+			tripResultDto.setCount(count);
+			tripResultDto.setResult(SUCCESS);
+		} catch (Exception e) {
+			e.printStackTrace();
+			tripResultDto.setResult(FAIL);
+		}
+
+		System.out.println("Trip Search List : " + tripResultDto);
+		return tripResultDto;
+	}
+
+	@Override
+	public TripResultDto tripDetail(TripParamDto tripParamDto) {
+		TripResultDto tripResultDto = new TripResultDto();
+		
+		try {
+			//int memberReadCount = dao.tripMemberReadCount(tripParamDto);
+			/*	조회수 관련
+			if (memberReadCount == 0) {
+				dao.tripMemberReadInsert(tripParamDto.getContentId(), tripParamDto.getMemberId());
+				dao.tripReadCountUpdate(tripParamDto.getContentId());
+			}
+			*/
+			
+			TripDto dto = dao.tripDetail(tripParamDto);
+			tripResultDto.setDto(dto);
+			tripResultDto.setResult(SUCCESS);
+		} catch (Exception e) {
+			e.printStackTrace();
+			tripResultDto.setResult(FAIL);
+		}
+		
+		return tripResultDto;
+	}
+
+	@Override
+	public TripResultDto tripListSidoGungu(TripParamDto tripParamDto) {
+		TripResultDto tripResultDto = new TripResultDto();
+
+		try {
+			List<TripDto> list = dao.tripListSidoGugun(tripParamDto);
+			int count = dao.tripListSidoGugunTotalCount(tripParamDto);
+
+			tripResultDto.setList(list);
+			tripResultDto.setCount(count);
+			tripResultDto.setResult(SUCCESS);
+		} catch (Exception e) {
+			e.printStackTrace();
+			tripResultDto.setResult(FAIL);
+		}
+
+		return tripResultDto;
+	}
+
+	@Override
+	public TripResultDto tripListSearchWordSidoGugun(TripParamDto tripParamDto) {
+		TripResultDto tripResultDto = new TripResultDto();
+		
+		System.out.println("tripListSearchWordSidoGugun => " + tripParamDto);
+
+		try {
+			List<TripDto> list = dao.tripListSearchWordSidoGugun(tripParamDto);
+			int count = dao.tripListSearchWordSidoGugunTotalCount(tripParamDto);
+
+			tripResultDto.setList(list);
+			tripResultDto.setCount(count);
+			tripResultDto.setResult(SUCCESS);
+		} catch (Exception e) {
+			e.printStackTrace();
+			tripResultDto.setResult(FAIL);
+		}
+
+		System.out.println("Trip Search List : " + tripResultDto);
+		return tripResultDto;
+	}
+
+	
+
+}

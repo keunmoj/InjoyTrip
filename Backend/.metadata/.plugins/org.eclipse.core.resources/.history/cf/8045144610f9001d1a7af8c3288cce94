@@ -1,0 +1,43 @@
+package com.ssafy.trip.tour.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.ssafy.trip.tour.dto.GugunDto;
+import com.ssafy.trip.tour.dto.SidoDto;
+import com.ssafy.trip.tour.dto.TripDto;
+import com.ssafy.trip.tour.dto.TripParamDto;
+
+@Mapper
+public interface TripDao {
+	// 시구군 리스트
+	List<SidoDto> sidoList();
+	List<GugunDto> gugunList(GugunDto gugunDto);
+	
+	
+	// 여행 목록
+	List<TripDto> tripList(TripParamDto tripParamDto);
+	int tripListTotalCount(TripParamDto tripParamDto);
+	// 여행 검색 리스트
+	List<TripDto> tripListSearchWord(TripParamDto tripParamDto);
+	int tripListSearchWordTotalCount(TripParamDto tripParamDto);
+	
+	// 여행 목록 시도
+	List<TripDto> tripListSido(TripParamDto tripParamDto);
+	int tripListSidoTotalCount(TripParamDto tripParamDto);
+	// 여행 목록 시도/군구
+	List<TripDto> tripListSidoGugun(TripParamDto tripParamDto);
+	int tripListSidoGugunTotalCount(TripParamDto tripParamDto);
+	// 여행 검색 리스트
+	List<TripDto> tripListSearchWordSidoGugun(TripParamDto tripParamDto);
+	int tripListSearchWordSidoGugunTotalCount(TripParamDto tripParamDto);
+
+	
+	
+	// 여행 상세
+	TripDto tripDetail(TripParamDto tripParamDto);
+	//int tripMemberReadCount(TripParamDto tripParamDto);
+	//int tripMemberReadInsert(@Param("contentId") int contentId, @Param("memberId") int memberId);
+	//int tripReadCountUpdate(int contentId);
+}

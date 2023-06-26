@@ -1,0 +1,12 @@
+package com.ssafy.trip.user.service;
+
+
+import com.ssafy.trip.user.dto.UserDto;
+import com.ssafy.trip.user.dto.UserResultDto;
+
+
+public interface UserService {
+	UserResultDto userRegister(UserDto userDto);
+	int validNickname(String userNickname);
+	int validEmail(String userEmail);
+}

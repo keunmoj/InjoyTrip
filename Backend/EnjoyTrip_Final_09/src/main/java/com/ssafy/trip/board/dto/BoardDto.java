@@ -1,0 +1,37 @@
+package com.ssafy.trip.board.dto;
+
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+public class BoardDto {
+	private int boardId;
+	private int userSeq;
+	private String userName;
+	private String title;
+	private String content;
+	private LocalDateTime regDt;
+	private int readCount;
+	
+	private boolean sameUser;
+	
+	private List<BoardFileDto> fileList;
+	
+	// for mybatis Date mapping 로컬데이터타입을 따로 구분 안해가지구.. 초큼 어려운 코드긴 함..
+	public void setRegDt(Date regDt) {
+		this.regDt = LocalDateTime.ofInstant(regDt.toInstant(), ZoneId.systemDefault());
+	}
+	
+}
