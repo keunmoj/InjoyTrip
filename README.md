@@ -1,4 +1,4 @@
-   # InjoyTrip
+    # InjoyTrip
 ![injoytrip](https://github.com/keunmoj/InjoyTrip/assets/94428183/587da266-7a7e-488a-a86d-2c9c92ac6d05)
 ## 서비스 내용
 전국 관광지 공공데이터를 활용한 관광지 검색, 사용자별 여행 일정 만들기를 제공하는 웹 사이트
